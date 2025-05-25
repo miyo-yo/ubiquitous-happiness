@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>パスワード認証</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 100px;
+      font-size: 20px;
+      font-family: sans-serif;
+    }
+    input {
+      font-size: 18px;
+      padding: 8px;
+    }
+    button {
+      font-size: 18px;
+      padding: 8px 16px;
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function checkPassword() {
+      const pass = document.getElementById("password").value;
+      if (pass === "secret123") {
+        window.location.href = "index.html"; // ホームページへ遷移
+      } else {
+        alert("パスワードが違います！");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>パスワードを入力してください</h1>
+  <input type="password" id="password" placeholder="パスワード">
+  <br>
+  <button onclick="checkPassword()">ログイン</button>
+</body>
+</html>

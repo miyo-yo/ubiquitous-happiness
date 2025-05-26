@@ -2,14 +2,18 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="robots" content="noindex, nofollow">
   <title>パスワード認証</title>
   <style>
     body {
       text-align: center;
-      margin-top: 100px;
+      margin-top: 80px;
       font-size: 20px;
       font-family: sans-serif;
+    }
+    .notice {
+      margin-bottom: 30px;
+      padding: 0 20px;
+      line-height: 1.8;
     }
     input {
       font-size: 18px;
@@ -24,7 +28,7 @@
   <script>
     function checkPassword() {
       const pass = document.getElementById("password").value;
-      if (pass === "miyomiyo") {
+      if (pass === "rps") {
         window.location.href = "home.html"; // ホームページへ遷移
       } else {
         alert("パスワードが違います！");
@@ -34,6 +38,14 @@
 </head>
 <body>
   <h1>パスワードを入力してください</h1>
+
+  <div class="notice">
+    この個人サイトでは夢、固定夢主、hnnm、nmmnを扱っております。<br>
+    上記がわからない / 嫌いである、という方は閲覧をお控えください。<br>
+    それでも良いという方は以下をどうぞ。<br>
+    パスワードはナマモノで有名な英語三文字、全て小文字です。
+  </div>
+
   <input type="password" id="password" placeholder="パスワード">
   <br>
   <button onclick="checkPassword()">ログイン</button>
